@@ -26,3 +26,21 @@ String encrypted = MCrypt.bytesToHex( mcrypt.encrypt("Text to Encrypt") );
 
 /* Decrypt */
 String decrypted = new String( mcrypt.decrypt( encrypted ) );
+
+
+3. Remove duplicates from arraylist
+-----------------------------------
+
+// this will remove duplicates from the given arraylist
+private static ArrayList RemoveDuplicate(ArrayList sourceList)
+{
+    ArrayList list = new ArrayList();
+    foreach (string item in sourceList)
+    {
+        if (!list.Contains(item))
+        {
+            list.Add(item);
+        }
+    }
+    return list;
+}
